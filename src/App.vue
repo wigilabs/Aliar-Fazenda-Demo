@@ -1,27 +1,62 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section class="wrapper fade-out" :class="{ out: wrapperOut }">
+      <img alt="Vue logo" src="./assets/logo.svg" class="logo">
+    </section>
+    <section class="content fade-in" :class="{ in: contentIn }">
+      todo el contenido
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld,
+
+  data() {
+    return {
+      hello: 'world!',
+      wrapperOut: false,
+      contentIn: false,
+    }
   },
+
+  created() {
+    setTimeout(() => {this.wrapperOut = true}, 1500)
+    setTimeout(() => {this.contentIn = true}, 2000)
+  }
 };
 </script>
 
 <style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+  // reset
+  body
+    margin 0
+
+  // general
+  body
+    background #F8FCF8
+  .fade-out
+    transition opacity .5s ease-in-out
+    opacity 1
+  .out
+    opacity 0
+  .fade-in
+    transition opacity .5s ease-in-out
+    opacity 0
+  .in
+    opacity 1
+
+  // wrapper
+  .wrapper
+    height 100vh
+    display flex
+    .logo
+      margin auto
+
+  // content
+  .content
+    position absolute
+    top 0
+    width 100%
 </style>
