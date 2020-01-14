@@ -5,8 +5,8 @@
     </section>
     <section class="content fade-in" :class="{ in: contentIn }">
         <!-- Produccion -->
-               <div class="md-title" style="color:#194F38">Producción</div>
-          <div class="md-subhead"  style="color:#194F38">Tractores</div>
+               <div class="md-title" style="color:#194F38;font-family: 'Montserrat', sans-serif;">Producción</div>
+          <div class="md-subhead"  style="color:#194F38;font-family: 'Montserrat', sans-serif;">Tractores</div>
        <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
@@ -33,7 +33,7 @@
   </div>
     </md-card>
         <!--campo-->
-        <div class="md-subhead"  style="color:#194F38">Campo</div>
+        <div class="md-subhead"  style="font-family: 'Montserrat', sans-serif;color:#194F38">Campo</div>
          <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
@@ -61,8 +61,8 @@
   </div>
     </md-card>
     <!-- Crianza -->
-          <div class="md-title"  style="color:#194F38">Crianza</div>
-          <div class="md-subhead"  style="color:#194F38">Cerdos</div>
+          <div class="md-title"  style="font-family: 'Montserrat', sans-serif;color:#194F38">Crianza</div>
+          <div class="md-subhead"  style="font-family: 'Montserrat', sans-serif;color:#194F38">Cerdos</div>
               <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
@@ -96,7 +96,7 @@
   </div>
     </md-card>
     <!-- Ventas -->
-           <div class="md-title"  style="color:#194F38">Puntos de venta</div>
+           <div class="md-title"  style="font-family: 'Montserrat', sans-serif;color:#194F38">Puntos de venta</div>
                       <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
@@ -109,7 +109,7 @@
             <p class="subtitle is-6">Antioquia</p>
     </md-menu>
 
-    <md-menu md-direction="bottom-end">
+    <md-menu md-direction="top-end">
         <!-- <p class="title is-6">$ 2.340.237 M</p> -->
             <p class="title is-4">$  {{sales.b.value}} M</p>
             <p class="subtitle is-6">Santander</p>
@@ -121,7 +121,7 @@
             <p class="subtitle is-6">Cundinamarca</p>
     </md-menu>
 
-    <md-menu md-direction="bottom-end">
+    <md-menu md-direction="top-end">
             <p class="title is-4">$  {{sales.d.value}} M</p>
             <p class="subtitle is-6">Casanare</p>
     </md-menu>
@@ -214,6 +214,7 @@ export default {
 </script>
 
 <style lang="stylus">
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
   // reset
   body
     margin 0
@@ -267,6 +268,7 @@ export default {
        color:#194F38;
        font-weight:800;
        font-size:15px;
+       font-family: 'Montserrat', sans-serif;
        * {
            color:#194F38; 
        }
