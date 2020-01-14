@@ -5,8 +5,8 @@
     </section>
     <section class="content fade-in" :class="{ in: contentIn }">
         <!-- Produccion -->
-               <div class="md-title" style="color:#194F38;font-family: 'Montserrat', sans-serif;">Producción</div>
-          <div class="md-subhead"  style="color:#194F38;font-family: 'Montserrat', sans-serif;">Tractores</div>
+               <div class="md-title" style="color:#194F38;font-family: 'Montserrat', sans-serif;font-weight:700;margin-top:10px;">Producción</div>
+          <div class="md-subhead"  style="color:#194F38;font-family: 'Montserrat', sans-serif;font-weight:400;">Tractores</div>
        <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
@@ -33,7 +33,7 @@
   </div>
     </md-card>
         <!--campo-->
-        <div class="md-subhead"  style="font-family: 'Montserrat', sans-serif;color:#194F38">Campo</div>
+        <div class="md-subhead"  style="font-family: 'Montserrat', sans-serif;color:#194F38;font-weight:400;margin-top:20px;margin-bottom:20px;">Campo</div>
          <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
@@ -61,8 +61,8 @@
   </div>
     </md-card>
     <!-- Crianza -->
-          <div class="md-title"  style="font-family: 'Montserrat', sans-serif;color:#194F38">Crianza</div>
-          <div class="md-subhead"  style="font-family: 'Montserrat', sans-serif;color:#194F38">Cerdos</div>
+          <div class="md-title"  style="font-family: 'Montserrat', sans-serif;color:#194F38;font-weight:700;margin-top:20px;">Crianza</div>
+          <div class="md-subhead"  style="font-family: 'Montserrat', sans-serif;color:#194F38;font-weight:400;margin-bottom:20px;;">Cerdos</div>
               <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
@@ -96,7 +96,7 @@
   </div>
     </md-card>
     <!-- Ventas -->
-           <div class="md-title"  style="font-family: 'Montserrat', sans-serif;color:#194F38">Puntos de venta</div>
+           <div class="md-title"  style="font-family: 'Montserrat', sans-serif;color:#194F38;font-weight:700;margin-top:20px;margin-bottom:20px;">Puntos de venta</div>
                       <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
@@ -126,12 +126,12 @@
             <p class="subtitle is-6">Casanare</p>
     </md-menu>
   </div>
-        <div class="row">
-          <div class="column">
+        <div>
+            <md-menu md-direction="top-end">
             <!-- <p class="title is-6">$ 1.308.065 M</p> -->
             <p class="title is-4">$ {{ acum }} M</p>
             <p class="subtitle is-6">Total</p>
-          </div>
+             </md-menu>
         </div>
     </md-card>
     <!-- Footer -->
@@ -214,7 +214,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
   // reset
   body
     margin 0
@@ -251,13 +251,14 @@ export default {
     margin 2%
 .md-title color:#194F38
 .md-button .md-card-media img 
-    width: 40px;
+    width: 70px;
     float:left;
   .logo
     width: 72px;
     margin: 24px auto 0;
     display: table;
    .md-card 
+       background-color:white
        text-align:center
        margin:0%;
        margin-right:5.6%;
@@ -267,8 +268,9 @@ export default {
    p 
        color:#194F38;
        font-weight:800;
-       font-size:15px;
+       font-size:20px;
        font-family: 'Montserrat', sans-serif;
+       margin-bottom:20px;
        * {
            color:#194F38; 
        }
