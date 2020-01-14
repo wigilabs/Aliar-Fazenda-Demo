@@ -8,10 +8,7 @@ class Clock {
       n.value += inc;
     }, dt);
   }
-    computed(a,b,c,d) {
-        let total = a+b+c+d;
-        return total;
-               }
+
 }
 
 export default new Clock();

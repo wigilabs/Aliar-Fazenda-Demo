@@ -11,20 +11,24 @@
           <div class="md-subhead">Tractores</div>
         </md-card-header-text>
       </md-card-header>
-             <md-card-media-actions>
-        <md-card-actions>
+           <div>
+    <md-menu md-direction="bottom-start">
             <md-card-media md-big>
   <img src="./assets/Unn7.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
               <p class="title">{{ trucks.parked.value }}</p>
             <p class="subtitle is-6">Aparcados</p>
-            <md-card-media md-big>
+    </md-menu>
+
+    <md-menu md-direction="bottom-end">
+                   <md-card-media md-big>
   <img src="./assets/Unn11.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
       <p class="title">{{ trucks.used.value }}</p>
             <p class="subtitle is-6">En campo</p>
-        </md-card-actions>
-      </md-card-media-actions>
+    </md-menu>
+
+  </div>
     </md-card>
         <!--campo-->
          <md-card class="material-card">
@@ -33,22 +37,25 @@
           <div class="md-subhead">Campo</div>
         </md-card-header-text>
       </md-card-header>
-             <md-card-media-actions>
-        <md-card-actions>
-            <md-card-media md-big>
+                 <div>
+    <md-menu md-direction="bottom-start">
+   <md-card-media md-big>
   <img src="./assets/g1.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
               <p class="title">{{ fields.sowing.value }}</p>
             <p class="subtitle is-6">Hectáreas</p>
              <p class="subtitle is-6">Siembra</p>
-            <md-card-media md-big>
+    </md-menu>
+
+    <md-menu md-direction="bottom-end">
+           <md-card-media md-big>
   <img src="./assets/g2.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
       <p class="title">{{ fields.harvest.value }}</p>
                 <p class="title is-6">toneladas</p>
             <p class="subtitle is-6">Cosecha</p>
-        </md-card-actions>
-      </md-card-media-actions>
+    </md-menu>
+  </div>
     </md-card>
     <!-- Crianza -->
               <md-card class="material-card">
@@ -58,27 +65,31 @@
           <div class="md-subhead">Cerdos</div>
         </md-card-header-text>
       </md-card-header>
-             <md-card-media-actions>
-        <md-card-actions>
-            <md-card-media md-big>
+                  <div>
+    <md-menu md-direction="bottom-start">
+       <md-card-media md-big>
   <img src="./assets/i1.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
               <p class="title">{{ pork.farm.value }}</p>
             <p class="subtitle is-6">Granja</p>
-            <md-card-media md-big>
+    </md-menu>
+
+    <md-menu md-direction="bottom-end">
+              <md-card-media md-big>
   <img src="./assets/i2.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
       <p class="title">{{ pork.processed.value }}</p>
                 <p class="title is-6">Procesados</p>
             
-              <md-card-media md-big>
+    </md-menu>
+       <md-menu md-direction="bottom-end">
+ <md-card-media md-big>
   <img src="./assets/i3.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
       <p class="title">{{ pork.packed.value }}</p>
                 <p class="title is-6">Empacados</p>
-          
-        </md-card-actions>
-      </md-card-media-actions>
+    </md-menu>
+  </div>
     </md-card>
     <!-- Ventas -->
                       <md-card class="material-card">
@@ -87,39 +98,36 @@
           <div class="md-title">Puntos de venta</div>
         </md-card-header-text>
       </md-card-header>
-   <div class="box">
-        <div class="row">
-          <div class="column">
-            <!-- <p class="title is-6">$ 1.200.134 M</p> -->
-            <p class="title is-4">$ {{sales.a.value}} M</p>
+    <div>
+    <md-menu md-direction="bottom-start">
+    <p class="title is-4">$ {{sales.a.value}} M</p>
             <p class="subtitle is-6">Antioquia</p>
-          </div>
-          <div class="column">
-            <!-- <p class="title is-6">$ 2.340.237 M</p> -->
+    </md-menu>
+
+    <md-menu md-direction="bottom-end">
+        <!-- <p class="title is-6">$ 2.340.237 M</p> -->
             <p class="title is-4">$  {{sales.b.value}} M</p>
             <p class="subtitle is-6">Santander</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="column">
-            <!-- <p class="title is-6">$ 3.720.405 M</p> -->
-            <p class="title is-4">$  {{sales.c.value}} M</p>
+    </md-menu>
+  </div>
+   <div>
+    <md-menu md-direction="bottom-start">
+         <p class="title is-4">$  {{sales.c.value}} M</p>
             <p class="subtitle is-6">Cundinamarca</p>
-          </div>
-          <div class="column">
-            <!-- <p class="title is-6">$ 708.345 M</p> -->
+    </md-menu>
+
+    <md-menu md-direction="bottom-end">
             <p class="title is-4">$  {{sales.d.value}} M</p>
             <p class="subtitle is-6">Casanare</p>
-          </div>
-        </div>
+    </md-menu>
+  </div>
         <div class="row">
           <div class="column">
             <!-- <p class="title is-6">$ 1.308.065 M</p> -->
-            <p class="title is-4">$ {{total}} M</p>
+            <p class="title is-4">$ {{ acum }} M</p>
             <p class="subtitle is-6">Total</p>
           </div>
         </div>
-      </div>
     </md-card>
     <!-- Footer -->
     <footer class="footer">
@@ -174,10 +182,28 @@ export default {
 
   created() {
     Clock.counter(this.trucks.parked, 3000, -1)
-    Clock.counter(this.trucks.used, 5000, 1)
-    let total = Clock.computed(this.sales.a,this.sales.b,this.sales.c,this.sales.d)
+    Clock.counter(this.trucks.used, 3000, 1)
+    Clock.counter(this.fields.sowing, 5000, 1)
+    Clock.counter(this.fields.harvest, 1000, 0.1)
+    Clock.counter(this.pork.farm, 500, -1)
+    Clock.counter(this.pork.processed, 500, 1)
+    Clock.counter(this.pork.packed, 100, 1)
+    Clock.counter(this.sales.a, 200, 1)
+    Clock.counter(this.sales.b, 300, 1)
+    Clock.counter(this.sales.c, 100, 1)
+    Clock.counter(this.sales.d, 400, 1)
     setTimeout(() => {this.wrapperOut = true}, 1500)
     setTimeout(() => {this.contentIn = true}, 2000)
+  },
+  filters: {
+    float: (value) => {
+      return value.toFixed(1);
+    }
+  },
+     computed: {
+    acum: function () {
+      return this.sales.a.value + this.sales.b.value + this.sales.c.value + this.sales.d.value
+    }
   }
 };
 </script>
@@ -224,10 +250,13 @@ export default {
     width: 72px;
     margin: 24px auto 0;
     display: table;
-   .md-card {
+   .md-card 
+       text-align:center
        margin:0%;
        margin-right:5.6%;
-   }
+   .md-menu
+       text-align:center
+       margin:3%;
    p 
        color:#194F38;
        font-weight:800;
@@ -235,4 +264,5 @@ export default {
        * {
            color:#194F38; 
        }
+ 
 </style>
