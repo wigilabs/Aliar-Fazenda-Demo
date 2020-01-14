@@ -54,7 +54,7 @@
            <md-card-media md-big>
   <img src="./assets/g2.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
-      <p class="title">{{ fields.harvest.value }}</p>
+      <p class="title">{{ fields.harvest.value | float }}</p>
                 <p class="title is-6">toneladas</p>
             <p class="subtitle is-6">Cosecha</p>
     </md-menu>
