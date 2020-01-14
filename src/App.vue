@@ -19,7 +19,7 @@
   <img src="./assets/Unn7.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
               <p class="title">{{ trucks.parked.value }}</p>
-            <p class="subtitle is-6">Aparcados</p>
+            <p class="subtitle is-6 sub">Aparcados</p>
     </md-menu>
 
     <md-menu md-direction="bottom-end">
@@ -27,7 +27,7 @@
   <img src="./assets/Unn11.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
       <p class="title">{{ trucks.used.value }}</p>
-            <p class="subtitle is-6">En campo</p>
+            <p class="subtitle is-6 sub">En campo</p>
     </md-menu>
 
   </div>
@@ -46,8 +46,8 @@
   <img src="./assets/g1.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
               <p class="title">{{ fields.sowing.value }}</p>
-            <p class="subtitle is-6">Hectáreas</p>
-             <p class="subtitle is-6">Siembra</p>
+            <p class="subtitle is-6 sub">Hectáreas</p>
+             <p class="subtitle is-6 sub">Siembra</p>
     </md-menu>
 
     <md-menu md-direction="bottom-end">
@@ -55,8 +55,8 @@
   <img src="./assets/g2.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
       <p class="title">{{ fields.harvest.value | float }}</p>
-                <p class="title is-6">toneladas</p>
-            <p class="subtitle is-6">Cosecha</p>
+                <p class="title is-6 sub">toneladas</p>
+            <p class="subtitle is-6 sub">Cosecha</p>
     </md-menu>
   </div>
     </md-card>
@@ -75,7 +75,7 @@
   <img src="./assets/i1.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
               <p class="title">{{ pork.farm.value }}</p>
-            <p class="subtitle is-6">Granja</p>
+            <p class="subtitle is-6 sub">Granja</p>
     </md-menu>
 
     <md-menu md-direction="bottom-end">
@@ -83,7 +83,7 @@
   <img src="./assets/i2.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
       <p class="title">{{ pork.processed.value }}</p>
-                <p class="title is-6">Procesados</p>
+                <p class="title is-6 sub">Procesados</p>
             
     </md-menu>
        <md-menu md-direction="bottom-end">
@@ -91,7 +91,7 @@
   <img src="./assets/i3.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
       <p class="title">{{ pork.packed.value }}</p>
-                <p class="title is-6">Empacados</p>
+                <p class="title is-6 sub">Empacados</p>
     </md-menu>
   </div>
     </md-card>
@@ -106,31 +106,31 @@
     <div>
     <md-menu md-direction="bottom-start">
     <p class="title is-4">$ {{sales.a.value}} M</p>
-            <p class="subtitle is-6">Antioquia</p>
+            <p class="subtitle is-6 sub">Antioquia</p>
     </md-menu>
 
     <md-menu md-direction="top-end">
         <!-- <p class="title is-6">$ 2.340.237 M</p> -->
             <p class="title is-4">$  {{sales.b.value}} M</p>
-            <p class="subtitle is-6">Santander</p>
+            <p class="subtitle is-6 sub">Santander</p>
     </md-menu>
   </div>
    <div>
     <md-menu md-direction="bottom-start">
          <p class="title is-4">$  {{sales.c.value}} M</p>
-            <p class="subtitle is-6">Cundinamarca</p>
+            <p class="subtitle is-6 sub">Cundinamarca</p>
     </md-menu>
 
     <md-menu md-direction="top-end">
             <p class="title is-4">$  {{sales.d.value}} M</p>
-            <p class="subtitle is-6">Casanare</p>
+            <p class="subtitle is-6 sub">Casanare</p>
     </md-menu>
   </div>
         <div>
             <md-menu md-direction="top-end">
             <!-- <p class="title is-6">$ 1.308.065 M</p> -->
             <p class="title is-4">$ {{ acum }} M</p>
-            <p class="subtitle is-6">Total</p>
+            <p class="subtitle is-6 sub">Total</p>
              </md-menu>
         </div>
     </md-card>
@@ -251,7 +251,8 @@ export default {
     margin 2%
 .md-title color:#194F38
 .md-button .md-card-media img 
-    width: 70px;
+    width: 69.67px;
+    height:52.17px;
     float:left;
   .logo
     width: 72px;
@@ -269,6 +270,12 @@ export default {
        color:#194F38;
        font-weight:800;
        font-size:20px;
+       font-family: 'Montserrat', sans-serif;
+       margin-bottom:20px;
+   p.sub 
+       color:#194F38;
+       font-weight:800;
+       font-size:12px;
        font-family: 'Montserrat', sans-serif;
        margin-bottom:20px;
        * {
