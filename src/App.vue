@@ -30,8 +30,7 @@
          <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
-          <div class="md-title">Campo</div>
-          <div class="md-subhead">Tractores</div>
+          <div class="md-subhead">Campo</div>
         </md-card-header-text>
       </md-card-header>
              <md-card-media-actions>
@@ -39,13 +38,13 @@
             <md-card-media md-big>
   <img src="./assets/g1.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
-              <p class="title">{{ trucks.parked.value }}</p>
+              <p class="title">{{ fields.sowing.value }}</p>
             <p class="subtitle is-6">Hectáreas</p>
              <p class="subtitle is-6">Siembra</p>
             <md-card-media md-big>
   <img src="./assets/g2.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
-      <p class="title">{{ trucks.used.value }}</p>
+      <p class="title">{{ fields.harvest.value }}</p>
                 <p class="title is-6">toneladas</p>
             <p class="subtitle is-6">Cosecha</p>
         </md-card-actions>
@@ -64,18 +63,18 @@
             <md-card-media md-big>
   <img src="./assets/i1.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
-              <p class="title">{{ trucks.parked.value }}</p>
+              <p class="title">{{ pork.farm.value }}</p>
             <p class="subtitle is-6">Granja</p>
             <md-card-media md-big>
   <img src="./assets/i2.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
-      <p class="title">{{ trucks.used.value }}</p>
+      <p class="title">{{ pork.processed.value }}</p>
                 <p class="title is-6">Procesados</p>
             
               <md-card-media md-big>
   <img src="./assets/i3.svg" style="height: 100%; opacity: .5;">
         </md-card-media>
-      <p class="title">{{ trucks.used.value }}</p>
+      <p class="title">{{ pork.packed.value }}</p>
                 <p class="title is-6">Empacados</p>
           
         </md-card-actions>
@@ -88,41 +87,39 @@
           <div class="md-title">Puntos de venta</div>
         </md-card-header-text>
       </md-card-header>
-             <md-card-media-actions>
    <div class="box">
         <div class="row">
           <div class="column">
             <!-- <p class="title is-6">$ 1.200.134 M</p> -->
-            <p class="title is-4">$ 1.200 M</p>
+            <p class="title is-4">$ {{sales.a.value}} M</p>
             <p class="subtitle is-6">Antioquia</p>
           </div>
           <div class="column">
             <!-- <p class="title is-6">$ 2.340.237 M</p> -->
-            <p class="title is-4">$ 2.340 M</p>
+            <p class="title is-4">$  {{sales.b.value}} M</p>
             <p class="subtitle is-6">Santander</p>
           </div>
         </div>
         <div class="row">
           <div class="column">
             <!-- <p class="title is-6">$ 3.720.405 M</p> -->
-            <p class="title is-4">$ 3.720 M</p>
+            <p class="title is-4">$  {{sales.c.value}} M</p>
             <p class="subtitle is-6">Cundinamarca</p>
           </div>
           <div class="column">
             <!-- <p class="title is-6">$ 708.345 M</p> -->
-            <p class="title is-4">$ 708 M</p>
+            <p class="title is-4">$  {{sales.d.value}} M</p>
             <p class="subtitle is-6">Casanare</p>
           </div>
         </div>
         <div class="row">
           <div class="column">
             <!-- <p class="title is-6">$ 1.308.065 M</p> -->
-            <p class="title is-4">$ 7,968 M</p>
+            <p class="title is-4">$ {{total}} M</p>
             <p class="subtitle is-6">Total</p>
           </div>
         </div>
       </div>
-      </md-card-media-actions>
     </md-card>
     <!-- Footer -->
     <footer class="footer">
@@ -157,9 +154,9 @@ export default {
         parked: { value: 20,  min: 0, default:20 },
         used:   { value: 120, max: 140, default:120 },
       },
-      field: {
-        sowing:  {value: 12},
-        harvest: {value: 15.5},
+      fields: {
+        sowing:  {value: 12, min: 0, max:20, default:12},
+        harvest: {value: 15.5, min:15, max:50, default:15.5},
       },
       pork: {
         farm:      {value: 1200},
@@ -178,6 +175,7 @@ export default {
   created() {
     Clock.counter(this.trucks.parked, 3000, -1)
     Clock.counter(this.trucks.used, 5000, 1)
+    let total = Clock.computed(this.sales.a,this.sales.b,this.sales.c,this.sales.d)
     setTimeout(() => {this.wrapperOut = true}, 1500)
     setTimeout(() => {this.contentIn = true}, 2000)
   }
@@ -217,17 +215,24 @@ export default {
     width 100%
     //main page and content
 #app
-    max-width 95%
-    margin 5%
+    max-width 98%
+    margin 2%
 .md-button .md-card-media img 
     width: 40px;
+    float:left;
   .logo
     width: 72px;
     margin: 24px auto 0;
     display: table;
    .md-card {
-       margin:10%;
-       margin-top:3%;
+       margin:0%;
+       margin-right:5.6%;
    }
-  
+   p 
+       color:#194F38;
+       font-weight:800;
+       font-size:15px;
+       * {
+           color:#194F38; 
+       }
 </style>
