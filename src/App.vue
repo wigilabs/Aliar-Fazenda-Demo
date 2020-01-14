@@ -4,11 +4,13 @@
       <img alt="Vue logo" src="./assets/logo.svg" class="logo">
     </section>
     <section class="content fade-in" :class="{ in: contentIn }">
+        <!-- Produccion -->
+               <div class="md-title" style="color:#194F38">Producción</div>
+          <div class="md-subhead"  style="color:#194F38">Tractores</div>
        <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
-          <div class="md-title">Producción</div>
-          <div class="md-subhead">Tractores</div>
+       <!--headers -->
         </md-card-header-text>
       </md-card-header>
            <div>
@@ -31,10 +33,11 @@
   </div>
     </md-card>
         <!--campo-->
+        <div class="md-subhead"  style="color:#194F38">Campo</div>
          <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
-          <div class="md-subhead">Campo</div>
+            <!--headers -->
         </md-card-header-text>
       </md-card-header>
                  <div>
@@ -58,11 +61,12 @@
   </div>
     </md-card>
     <!-- Crianza -->
+          <div class="md-title"  style="color:#194F38">Crianza</div>
+          <div class="md-subhead"  style="color:#194F38">Cerdos</div>
               <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
-          <div class="md-title">Crianza</div>
-          <div class="md-subhead">Cerdos</div>
+        <!--Headers-->
         </md-card-header-text>
       </md-card-header>
                   <div>
@@ -92,10 +96,11 @@
   </div>
     </md-card>
     <!-- Ventas -->
+           <div class="md-title"  style="color:#194F38">Puntos de venta</div>
                       <md-card class="material-card">
       <md-card-header>
         <md-card-header-text>
-          <div class="md-title">Puntos de venta</div>
+       
         </md-card-header-text>
       </md-card-header>
     <div>
@@ -243,6 +248,7 @@ export default {
 #app
     max-width 98%
     margin 2%
+.md-title color:#194F38
 .md-button .md-card-media img 
     width: 40px;
     float:left;
