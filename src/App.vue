@@ -172,15 +172,15 @@ export default {
         harvest: {value: 15.5, min:15, max:50, default:15.5},
       },
       pork: {
-        farm:      {value: 1200},
-        processed: {value: 750},
-        packed:    {value: 12500},
+        farm:      {value: 1200,  min: 0, default:1200 },
+        processed: {value: 750,  min: 0,  default:750 },
+        packed:    {value: 12500,  min: 0,  default:12500 },
       },
       sales: {
-        a: {value: 1200 },
-        b: {value: 2340 },
-        c: {value: 3720 },
-        d: {value: 708 },
+        a: {value: 1200, min: 0, default: 1200 },
+        b: {value: 2340, min: 0, default: 2340 },
+        c: {value: 3720, min: 0, default: 3720},
+        d: {value: 708, min: 0, default: 708},
       }
     };
   },
