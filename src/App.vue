@@ -4,96 +4,92 @@
       <img alt="Vue logo" src="./assets/logo.svg" class="logo">
     </section>
     <section class="content fade-in" :class="{ in: contentIn }">
-      <img class="logo" src="./assets/logo.png">
-
-    <!-- Produccion -->
-    <div class="section">
-
-      <p class="title">Producción</p>
-
-      <p class="title is-5">Tractores</p>
-      <div class="box">
-        <div class="row">
-          <div class="column">
-            <figure class="image is-64x64">
-              <img src="./assets/tractor.png" style="height: 100%; opacity: .5;">
-            </figure>
-            <p class="title">{{ trucks.parked.value }}</p>
+       <md-card class="material-card">
+      <md-card-header>
+        <md-card-header-text>
+          <div class="md-title">Producción</div>
+          <div class="md-subhead">Tractores</div>
+        </md-card-header-text>
+      </md-card-header>
+             <md-card-media-actions>
+        <md-card-actions>
+            <md-card-media md-big>
+  <img src="./assets/Unn7.svg" style="height: 100%; opacity: .5;">
+        </md-card-media>
+              <p class="title">{{ trucks.parked.value }}</p>
             <p class="subtitle is-6">Aparcados</p>
-          </div>
-          <div class="column">
-            <figure class="image is-64x64" style="opacity: .5;">
-              <img src="./assets/tractor2.png">
-            </figure>
-            <p class="title">{{ trucks.used.value }}</p>
+            <md-card-media md-big>
+  <img src="./assets/Unn11.svg" style="height: 100%; opacity: .5;">
+        </md-card-media>
+      <p class="title">{{ trucks.used.value }}</p>
             <p class="subtitle is-6">En campo</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="title is-5">Campo</p>
-      <div class="box">
-        <div class="row">
-          <div class="column">
-            <figure class="image is-64x64">
-              <img src="./assets/siembra.png" style="opacity: .5;">
-            </figure>
-            <p class="title">12</p>
-            <p class="title is-6">hectáreas</p>
-            <p class="subtitle is-6">Siembra</p>
-          </div>
-          <div class="column">
-            <figure class="image is-64x64">
-              <img src="./assets/cosecha.png" style="opacity: .5;">
-            </figure>
-            <p class="title">15.5</p>
-            <p class="title is-6">toneladas</p>
+        </md-card-actions>
+      </md-card-media-actions>
+    </md-card>
+        <!--campo-->
+         <md-card class="material-card">
+      <md-card-header>
+        <md-card-header-text>
+          <div class="md-title">Campo</div>
+          <div class="md-subhead">Tractores</div>
+        </md-card-header-text>
+      </md-card-header>
+             <md-card-media-actions>
+        <md-card-actions>
+            <md-card-media md-big>
+  <img src="./assets/g1.svg" style="height: 100%; opacity: .5;">
+        </md-card-media>
+              <p class="title">{{ trucks.parked.value }}</p>
+            <p class="subtitle is-6">Hectáreas</p>
+             <p class="subtitle is-6">Siembra</p>
+            <md-card-media md-big>
+  <img src="./assets/g2.svg" style="height: 100%; opacity: .5;">
+        </md-card-media>
+      <p class="title">{{ trucks.used.value }}</p>
+                <p class="title is-6">toneladas</p>
             <p class="subtitle is-6">Cosecha</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
+        </md-card-actions>
+      </md-card-media-actions>
+    </md-card>
     <!-- Crianza -->
-    <div class="section">
-
-      <p class="title">Crianza</p>
-
-      <p class="title is-5">Cerdos</p>
-      <div class="box">
-
-        <div class="row">
-          <div class="column">
-            <figure class="image is-64x64">
-              <img src="./assets/cerdo.png">
-            </figure>
-            <p class="title is-5">1200</p>
-            <p class="subtitle is-7">Granja</p>
-          </div>
-          <div class="column">
-            <figure class="image is-64x64">
-              <img src="./assets/cerdo2.png">
-            </figure>
-            <p class="title is-5">750</p>
-            <p class="subtitle is-7">Procesados</p>
-          </div>
-          <div class="column">
-            <figure class="image is-64x64">
-              <img src="./assets/cerdo3.png">
-            </figure>
-            <p class="title is-5">12500</p>
-            <p class="subtitle is-7">Empacados</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
+              <md-card class="material-card">
+      <md-card-header>
+        <md-card-header-text>
+          <div class="md-title">Crianza</div>
+          <div class="md-subhead">Cerdos</div>
+        </md-card-header-text>
+      </md-card-header>
+             <md-card-media-actions>
+        <md-card-actions>
+            <md-card-media md-big>
+  <img src="./assets/i1.svg" style="height: 100%; opacity: .5;">
+        </md-card-media>
+              <p class="title">{{ trucks.parked.value }}</p>
+            <p class="subtitle is-6">Granja</p>
+            <md-card-media md-big>
+  <img src="./assets/i2.svg" style="height: 100%; opacity: .5;">
+        </md-card-media>
+      <p class="title">{{ trucks.used.value }}</p>
+                <p class="title is-6">Procesados</p>
+            
+              <md-card-media md-big>
+  <img src="./assets/i3.svg" style="height: 100%; opacity: .5;">
+        </md-card-media>
+      <p class="title">{{ trucks.used.value }}</p>
+                <p class="title is-6">Empacados</p>
+          
+        </md-card-actions>
+      </md-card-media-actions>
+    </md-card>
     <!-- Ventas -->
-    <div class="section">
-      <p class="title">Puntos de Venta</p>
-      <div class="box">
+                      <md-card class="material-card">
+      <md-card-header>
+        <md-card-header-text>
+          <div class="md-title">Puntos de venta</div>
+        </md-card-header-text>
+      </md-card-header>
+             <md-card-media-actions>
+   <div class="box">
         <div class="row">
           <div class="column">
             <!-- <p class="title is-6">$ 1.200.134 M</p> -->
@@ -126,15 +122,14 @@
           </div>
         </div>
       </div>
-    </div>
-
-
+      </md-card-media-actions>
+    </md-card>
     <!-- Footer -->
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>
+        <!--<p>
           <a href="https://wigilabs.com/">WigiLabs</a> ♡ <a href="https://newrelic.com/">New Relic</a>
-        </p>
+        </p>-->
       </div>
     </footer>
 
@@ -143,6 +138,13 @@
 </template>
 
 <script>
+    import Clock from './Clock/Clock'
+    import Vue from 'vue'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+// DARK THEME import 'vue-material/dist/theme/default-dark.css' // This line here
+
+Vue.use(VueMaterial)
 export default {
   name: 'app',
 
@@ -174,6 +176,8 @@ export default {
   },
 
   created() {
+    Clock.counter(this.trucks.parked, 3000, -1)
+    Clock.counter(this.trucks.used, 5000, 1)
     setTimeout(() => {this.wrapperOut = true}, 1500)
     setTimeout(() => {this.contentIn = true}, 2000)
   }
@@ -213,18 +217,17 @@ export default {
     width 100%
     //main page and content
 #app
-    max-width 700px
-    margin auto
-
+    max-width 95%
+    margin 5%
+.md-button .md-card-media img 
+    width: 40px;
   .logo
     width: 72px;
     margin: 24px auto 0;
     display: table;
-
-  .row
-    display flex
-    .column
-      text-align center
-      .image
-        margin auto
+   .md-card {
+       margin:10%;
+       margin-top:3%;
+   }
+  
 </style>
